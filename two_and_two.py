@@ -46,7 +46,7 @@ def makeTweets():
 	counter = 15
 
 	while counter > 0:
-		print "-----------------" + str(counter)
+		if v: print "-----------------" + str(counter)
 		# choose a random treble to start the sentence
 		sentence =  random.choice(frequency.keys())
 
@@ -108,7 +108,7 @@ def makeTweets():
 			sentence = sentence + "."
 		
 		sentence = sentence[:1].upper() + sentence[1:]
-		print sentence
+		if v: print sentence
 
 		# put the sentence in the ebook
 		output = open("ebooks.txt", 'a')
